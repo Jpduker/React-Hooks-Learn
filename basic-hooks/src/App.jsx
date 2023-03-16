@@ -11,7 +11,9 @@ function App() {
   const theme = state.theme
 
   function decrementCount() {
-    setCount(prevCount => prevCount -1);
+    setState(prevState =>{ return {
+      ...prevState, count: prevState.count -1
+    }});
   }
 
   function incrementCount() {
@@ -21,6 +23,7 @@ function App() {
     <>
       <button onClick={incrementCount}>+</button>
       <span>{count}</span>
+      <span>{theme}</span>
       <button onClick={decrementCount}>-</button>
     </>
   );
