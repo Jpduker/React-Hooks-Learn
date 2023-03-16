@@ -6,11 +6,14 @@ import './App.css'
 function App() {
   const [count, setCount] =useState(4)
 
-
+  function decrementCount() {
+    
+    
+  }
   return (
    <>
 
-      <button type="">+</button>
+      <button onClick={decrementCount} >+</button>
       <span>{count}</span>
       <button type="">-</button>
     </>
