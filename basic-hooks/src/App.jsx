@@ -1,29 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+
 
 function App() {
-  const [count, setCount] =useState(4)
+  const [state, setState] = useState({count:4 , theme:'blue'});
+
+  const count = state.count
+  const theme = state.theme
 
   function decrementCount() {
-    setCount(count -1 )
-    
-    
+    setCount(prevCount => prevCount -1);
   }
 
-  function  incrementCount() {
-    setCount(count +1)
-    
+  function incrementCount() {
+    setCount(prevCount => prevCount +1);
   }
   return (
-   <>
-
-      <button onClick={incrementCount} >+</button>
+    <>
+      <button onClick={incrementCount}>+</button>
       <span>{count}</span>
       <button onClick={decrementCount}>-</button>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
