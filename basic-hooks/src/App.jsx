@@ -17,8 +17,8 @@ function App() {
   }
 
   function incrementCount() {
-    setCount(prevState => {
-      return { ...prevState, prevState.count +1}
+    setState(prevState => {
+      return { ...prevState, count : prevState.count +1}
     });
   }
   return (
